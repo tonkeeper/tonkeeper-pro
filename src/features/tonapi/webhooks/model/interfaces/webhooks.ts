@@ -1,8 +1,6 @@
-export interface Webhook {
-    id: number;
-    endpoint: string;
-    subscribed_accounts: number;
-}
+import { RTWebhookList } from 'src/shared/api/streaming-api';
+
+export type Webhook = RTWebhookList['webhooks'][number];
 
 export type WebhooksStatType = 'delivered' | 'failed';
 
